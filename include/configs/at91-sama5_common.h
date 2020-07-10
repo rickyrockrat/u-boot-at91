@@ -22,7 +22,21 @@
 #define CONFIG_AT91_GPIO
 #endif
 
+#define CONFIG_SYS_MAX_FLASH_BANKS      1
+#define CONFIG_SYS_FLASH_BASE		0x10000000
+#define CONFIG_SYS_MAX_FLASH_SECT       131
+/* NOR flash */
+/*
+ * #ifdef CONFIG_MTD_NOR_FLASH
+#define SPL_BOOT_SPI_NOR_FLASH          1
+#define CONFIG_SPL_BOOT_DEVICE          SPL_BOOT_SPI_NOR_FLASH
+#endif
 
+#if CONFIG_SPL_BOOT_DEVICE == SPL_BOOT_SPI_NOR_FLASH
+** SPL related SPI defines 
+#define CONFIG_SYS_U_BOOT_OFFS		CONFIG_SYS_SPI_U_BOOT_OFFS
+#endif
+*/
 /*
  * BOOTP options
  */
@@ -55,8 +69,8 @@
 #elif CONFIG_SPI_BOOT
 /* u-boot env in serial flash, by default is bus 0 and cs 0 */
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "				\
-					"sf read 0x21000000 0x60000 0xc000; "	\
-					"sf read 0x22000000 0x6c000 0x394000; "	\
+					"sf read 0x21000000 0x70000 0xd000; "	\
+					"sf read 0x22000000 0x80000 0x3e0000; "	\
 					"bootz 0x22000000 - 0x21000000"
 #elif CONFIG_QSPI_BOOT
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "					\

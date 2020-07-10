@@ -20,8 +20,8 @@
 #define SNOR_MFR_ATMEL		CFI_MFR_ATMEL
 #define SNOR_MFR_GIGADEVICE	0xc8
 #define SNOR_MFR_INTEL		CFI_MFR_INTEL
-#define SNOR_MFR_ST		CFI_MFR_ST /* ST Micro <--> Micron */
-#define SNOR_MFR_MICRON		CFI_MFR_MICRON /* ST Micro <--> Micron */
+#define SNOR_MFR_ST		CFI_MFR_MICRON /* ST Micro <--> Micron */
+#define SNOR_MFR_MICRON		0x20 /* ST Micro <--> Micron */
 #define SNOR_MFR_MACRONIX	CFI_MFR_MACRONIX
 #define SNOR_MFR_SPANSION	CFI_MFR_AMD
 #define SNOR_MFR_SST		CFI_MFR_SST
