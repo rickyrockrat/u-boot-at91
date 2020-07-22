@@ -104,7 +104,7 @@ CONFIG_USE_BOOTARGS=y
 CONFIG_LOGLEVEL=4
 CONFIG_SPL_LOGLEVEL=4
 CONFIG_TPL_LOGLEVEL=4
-CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=spi0.0:32k(bootstrap)ro,768k(uboot)ro,256K(env_redundant),256k(env),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=6 root=ubi0:rootfs"
+CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=spi0.0:7k(bootstrap)ro,668k(uboot)ro,50k(dtb),4m(kernel)ro,4190k(rootfs) rootfstype=ubifs ubi.mtd=6 root=ubi0:rootfs"
 CONFIG_LOG_DEFAULT_LEVEL=6
 CONFIG_DEFAULT_FDT_FILE=""
 CONFIG_BOARD_LATE_INIT=y
