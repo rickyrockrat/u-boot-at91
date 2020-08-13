@@ -57,7 +57,7 @@
 				"fi; "					\
 				"fatload mmc 0:1 0x21000000 ${dtb_name}; " \
 				"fatload mmc 0:1 0x22000000 uImage; "	\
-				"bootz 0x22000000 - 0x21000000"
+				"bootm 0x22000000 - 0x21000000"
 
 #else
 
