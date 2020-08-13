@@ -70,7 +70,7 @@
 /* u-boot env in serial flash, by default is bus 0 and cs 0 */
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "				\
 					"sf read 0x21000000 0xB0000 0xd000; "	\
-					"sf read 0x22000000 0xC0000 0x3e0000; "	\
+					"sf read 0x22000000 0xC0000 0x5a0000; "	\
 					"bootz 0x22000000 - 0x21000000"
 #elif CONFIG_QSPI_BOOT
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "					\
