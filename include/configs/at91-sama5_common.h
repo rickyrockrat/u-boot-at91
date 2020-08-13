@@ -56,8 +56,8 @@
 				    "setenv dtb_name at91-${board_name}.dtb; " \
 				"fi; "					\
 				"fatload mmc 0:1 0x21000000 ${dtb_name}; " \
-				"fatload mmc 0:1 0x22000000 uImage; "	\
-				"bootm 0x22000000 - 0x21000000"
+				"fatload mmc 0:1 0x22000000 zImage; "	\
+				"bootz 0x22000000 - 0x21000000"
 
 #else
 
@@ -71,7 +71,7 @@
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "				\
 					"sf read 0x21000000 0xB0000 0xd000; "	\
 					"sf read 0x22000000 0xC0000 0x5a0000; "	\
-					"bootz 0x22000000 - 0x21000000"
+					"bootm 0x22000000 - 0x21000000"
 #elif CONFIG_QSPI_BOOT
 #define CONFIG_BOOTCOMMAND		"sf probe 0; "					\
 					"sf read 0x21000000 0x180000 0x80000; "		\
