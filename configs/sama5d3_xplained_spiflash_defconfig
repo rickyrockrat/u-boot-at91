@@ -276,7 +276,8 @@ CONFIG_BOOTSTAGE_STASH_SIZE=0x1000
 CONFIG_SPI_BOOT=y
 CONFIG_BOOTDELAY=3
 CONFIG_USE_BOOTARGS=y
-CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=atmel_nand:256k(bootstrap)ro,768k(uboot)ro,256K(env_redundant),256k(env),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=6 root=ubi0:rootfs"
+#CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=atmel_nand:256k(bootstrap)ro,768k(uboot)ro,256K(env_redundant),256k(env),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=6 root=ubi0:rootfs"
+CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=spi0.0:7k(bootstrap)ro,668k(uboot)ro,51k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ext4 root=/dev/ram0 rw"
 # CONFIG_USE_BOOTCOMMAND is not set
 # CONFIG_USE_PREBOOT is not set
 
@@ -1170,7 +1171,7 @@ CONFIG_WATCHDOG_TIMEOUT_MSECS=60000
 # CONFIG_FS_BTRFS is not set
 # CONFIG_FS_CBFS is not set
 # CONFIG_SPL_FS_CBFS is not set
-# CONFIG_FS_EXT4 is not set
+CONFIG_FS_EXT4=y
 CONFIG_FS_FAT=y
 # CONFIG_FAT_WRITE is not set
 CONFIG_FS_FAT_MAX_CLUSTSIZE=65536
