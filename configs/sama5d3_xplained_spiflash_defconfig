@@ -277,7 +277,7 @@ CONFIG_SPI_BOOT=y
 CONFIG_BOOTDELAY=3
 CONFIG_USE_BOOTARGS=y
 #CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=atmel_nand:256k(bootstrap)ro,768k(uboot)ro,256K(env_redundant),256k(env),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=6 root=ubi0:rootfs"
-CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=spi0.0:7k(bootstrap)ro,668k(uboot)ro,51k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ramfs rdinit=/bin/sh root=/dev/ram0 rw"
+CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk rootfstype=ramfs init=/init root=/dev/ram rw"
 # CONFIG_USE_BOOTCOMMAND is not set
 # CONFIG_USE_PREBOOT is not set
 
